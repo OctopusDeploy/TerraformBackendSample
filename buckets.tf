@@ -5,7 +5,6 @@ variable "bucket_name" {
 resource "aws_s3_bucket" "mybucket" {
   bucket = var.bucket_name
   force_destroy = true
-  region = "us-east-1"
   acl    = "private"
   tags = {
       Name        = "My bucket"
