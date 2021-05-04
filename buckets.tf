@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "mybucket" {
   force_destroy = true
   acl    = "private"
   tags = {
-      Name        = "My bucket"
+      Name        = var.bucket_name
       Environment = "Dev"
   }
   cors_rule {
